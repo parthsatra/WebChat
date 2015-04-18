@@ -1,0 +1,49 @@
+extends layout
+// Define basic data fields using Jade’s mixin features
+// Bind to those data fields for dynamic updates
+mixin metric(id,title,footer)
+  div(class="panel panel-default",id="#{id}-metric" )
+    if title
+      div.panel-heading: h3.panel-title= title
+    div(class="panel-body metric")
+      h1#ss-message= "TBD"
+    if footer
+      div.panel-footer= footer
+  block styles
+    link(rel='stylesheet', href='/stylesheets/style.css')
+block scripts
+  script(src='/socket.io/socket.io.js')
+  // bind to the data fields defined in mixin
+  // stream the actual data from the data stream emitter
+  script(src='/javascripts/client.socket.io.js')
+block content
+  div(class="container-fluid")
+    div(class = "page-header")
+      h1(class = "text-primary").
+        Web Chat
+
+    // Text field and button for nick name.
+    div#nickname_div(class = "input-group")
+      input#nickname(type="text", class="form-control", placeholder="Nickname")
+      span(class="input-group-btn")
+        button#register(class="btn btn-default", type="button").
+          Register
+
+    // Table that contains all the incoming and outgoing messages from the client.    
+    div#window(class="row")
+      div(class="col-md-12")
+        div(class="panel panel-default", id="chat-window")
+          div.panel-heading: h3.panel-title="Chat Window"
+        div#chatbody(class="panel-body")
+          div
+            h4
+          div
+            h4
+
+    // Text field and add button to enter the chat.
+    // Text field and button for nick name.
+    div#chat_div(class = "input-group")
+      input#chat(type="text", class="form-control")
+      span(class="input-group-btn")
+        button#send(class="btn btn-default", type="button").
+          Send

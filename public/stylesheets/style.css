@@ -1,0 +1,19 @@
+div.panel-body {
+  padding: 2%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-style: solid;
+  border-width: medium;
+}
+
+#chat_div {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+#nickname_div {
+  padding-bottom: 5%;
+}
+
+.chat-message {
+  white-space: pre-wrap;
+}
