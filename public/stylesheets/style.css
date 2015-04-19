@@ -3,6 +3,7 @@ div.panel-body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   border-style: solid;
   border-width: medium;
+  white-space: pre-wrap;
 }
 
 #chat_div {
@@ -16,4 +17,12 @@ div.panel-body {
 
 .chat-message {
   white-space: pre-wrap;
+}
+
+.max-height {
+  height: 80%
+}
+
+.no-overflow {
+  overflow: hidden;
 }

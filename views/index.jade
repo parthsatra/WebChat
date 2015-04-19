@@ -30,11 +30,11 @@ block content
           Register
 
     // Table that contains all the incoming and outgoing messages from the client.    
-    div#window(class="row")
+    div#window(class="max-height no-overflow")
       div(class="col-md-12")
         div(class="panel panel-default", id="chat-window")
           div.panel-heading: h3.panel-title="Chat Window"
-        div#chatbody(class="panel-body")
+        div#chatbody(class="span12 pre-scrollable panel-body")
           div
             h4
           div
@@ -43,7 +43,7 @@ block content
     // Text field and add button to enter the chat.
     // Text field and button for nick name.
     div#chat_div(class = "input-group")
-      input#chat(type="text", class="form-control")
+      input#chat(type="text", class="form-control", placeholder="Enter Chat Message")
       span(class="input-group-btn")
         button#send(class="btn btn-default", type="button").
           Send
