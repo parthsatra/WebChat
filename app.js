@@ -28,7 +28,7 @@ sio.sockets.on('connection', function(socket) {
             clients[data.user] = socket.id;
             socketsOfClients[socket.id] = data.user;
             console.log("Sending response");
-            socket.emit('response', {status:true});
+            socket.emit('response', {status:true, text: "Welcome, " + data.user});
         } else if(clients[data.user] === socket.id) {
             socket.emit('response', {status:true});
         } else {
