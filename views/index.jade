@@ -13,16 +13,15 @@ mixin metric(id,title,footer)
     link(rel='stylesheet', href='/stylesheets/style.css')
 block scripts
   script(src='/socket.io/socket.io.js')
-  // bind to the data fields defined in mixin
-  // stream the actual data from the data stream emitter
   script(src='/javascripts/client.socket.io.js')
 block content
   div(class="container-fluid")
+    // Setting the page header.
     div(class = "page-header")
       h1#headerid(class = "text-primary").
         Web Chat
 
-    // Text field and button for nick name.
+    // Adding Text input and button for nick name and a label for error handling.
     label#error(class="label label-danger").
       Nickname already exists. Please try again.
     div#nickname_div(class = "input-group")
@@ -31,19 +30,14 @@ block content
         button#register(class="btn btn-Primary", type="button").
           Register
 
-    // Table that contains all the incoming and outgoing messages from the client.
+    // Defining a table that holds all the chat messages..
     div#window(class="my-height no-overflow")
       div(class="col-md-12")
         div(class="panel panel-default", id="chat-window")
           div.panel-heading: h3.panel-title="Chat Window"
         div#chatbody(class="chat-message-div span12 pre-scrollable panel-body")
-          div
-            h4
-          div
-            h4
 
-    // Text field and add button to enter the chat.
-    // Text field and button for nick name.
+    // Text field and add button to send the chat message.
     div#chat_div(class = "input-group")
       input#chat(type="text", class="form-control", placeholder="Enter Chat Message")
       span(class="input-group-btn")
