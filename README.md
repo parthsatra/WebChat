@@ -6,8 +6,11 @@ The appplication creates a server in node.js using express.js framework for a mu
 "app.js" file contains the server code. Client code is build using jade, hence index.html is generated from index.jade file present under views. Client side javascript code for socket connections and other events is present in "client.socket.io.js". The code also uses JQuery and bootstrap public libraries. 
 
 Steps to run the application. 
+
 1) Install node js on the machine.
+
 2) Clone this git repository which contains the application code. 
+
 3) install the required packages using command 
     -> npm install <package_name> --save
     The package to be installed include "express", "morgan", "cookie-parser", "body-parser" and "socket.io"
