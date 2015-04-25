@@ -11,14 +11,12 @@ Steps to run the application.
 
 2) Clone this git repository which contains the application code. 
 
-3) install the required packages using command 
+3) install the required packages using the following command. These package to be installed include "express", "morgan", "cookie-parser", "body-parser", "socket.io" and "jade" 
 
     -> npm install <package_name> --save
-   
-    The package to be installed include "express", "morgan", "cookie-parser", "body-parser", "socket.io" and "jade"
     
 4) Now you are ready to run the application. To run the application run the following command
     
     -> node app.js
-
+    
 5) The server starts running on port 3000. Now open the browser and connect to "http://localhost:3000". This will open the web client. You can open multiple clients and now you are ready to chat. 
