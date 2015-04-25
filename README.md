@@ -1,11 +1,13 @@
 # WebChat
 Sample web chat application in node.js, twitter bootstrap and express.js
 
+# Description
+
 The appplication creates a server in node.js using express.js framework for a multiuser chat application where users can log on and chat with other users. The user has to register with the server with his nickname so that other users can identify the person chatting and then can chat freely with other users.
 
 "app.js" file contains the server code. Client code is build using jade, hence index.html is generated from index.jade file present under views. Client side javascript code for socket connections and other events is present in "client.socket.io.js". The code also uses JQuery and bootstrap public libraries. 
 
-Steps to run the application. 
+# Steps to run the application. 
 
 1) Install node js on the machine.
 
